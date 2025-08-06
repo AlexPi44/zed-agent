@@ -1,0 +1,7 @@
+image: gitpod/workspace-full
+tasks:
+  - init: nix develop
+    command: cargo run --release -- headless --listen-port 8888
+ports:
+  - port: 8888
+    onOpen: open-preview
